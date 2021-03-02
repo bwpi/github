@@ -6,7 +6,7 @@ include (MODELS . 'model.php');
 /*
 *Переменные
 */
-
+$settttt;
 /*
 *Подключение шаблона
 */
