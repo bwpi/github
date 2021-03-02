@@ -1,0 +1,86 @@
+body {
+  background-color: #EDEEF0;
+  cursor: default;
+}
+header {
+  overflow: hidden !important;
+  height: 60px;
+  border-radius: 0px 0px 15px 15px; 
+  box-shadow: 0px 200px 0px 2000px rgba(0,0,0,0);
+}
+header:hover {
+  overflow: all !important;
+  height: 340px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 200px 0px 2000px rgba(0,0,0,0.7);
+}
+#a1width {
+  width: 100px;
+}
+.diver20 {
+  height: 20px
+}
+.mirger20 {
+  mirgin-top: 20px !important;
+}
+.mirgerl {
+  margin-left: 10px;
+}
+}
+.mycolmid {
+  margin-left: 10px;
+}
+.pointer:hover {
+  cursor: pointer;
+}
+#foot {
+  height: 50px; 
+  border-top: 1px solid #000000;
+  margin-top: 10px; 
+  margin-left: 10px;
+}
+#black {
+  color: black;
+}
+#green {
+  color: green;
+}
+#red {
+  color: red;
+}
+#h1text {
+  color: #ffffff; 
+  padding-left: 100px;
+}
+.fixedbyme {
+  margin-top: 60px;
+  top: 150px !important;
+  position: static !important;
+  z-index: 1;
+}
+      .btn1, .btn1:hover{
+        transition: 0.1s
+      }
+      .ahref:hover {
+        margin-left: 10px;
+      }
+      .btn1 {
+        background-color: #fff;
+        color: #000;
+        width: 150px !important;
+        box-shadow: 0px 0px white;
+      }
+      .alert {
+        transition: 0.5s;
+        opacity: 0%;
+        height: 235px !important;
+        overflow: auto !important;
+        width: 96% !important;
+        margin-left: 2% !important;
+        background-color: white !important;
+        color: black !important;
+        border-radius: 5px 5px 15px 15px !important;
+      }
+      header:hover .alert {
+        opacity: 100%;
+      }

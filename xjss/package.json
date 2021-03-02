@@ -1,0 +1,11 @@
+{
+    "name": "xjss",
+    "version": "1.0.0",
+    "description": "uploading files",
+    "main": "index.html",
+    "scripts": {
+        "serve": "parcel index.html"
+    },
+    "author": "ilya",
+    "license": "ISC"
+}
