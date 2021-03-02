@@ -1,5 +1,183 @@
+body {
+    padding: 0;
+}
+
 .img-view {
-	border: 2px solid black;	
-	display: flex;
-	justify-content: center;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.wrap {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.form-circle {
+    position: relative;
+    width: 40em;
+    height: 40em;
+    padding: 0;
+    border: 1px solid blue;
+    border-radius: 50%;
+    list-style: none;
+    box-sizing: content-box;
+    animation: rotation ease 30s;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.form-circle>* {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10em;
+    height: 10em;
+    margin: -5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-circle> :nth-of-type(1) {
+    transform: rotate(0deg) translate(20em) rotate(0deg);
+}
+
+.form-circle> :nth-of-type(2) {
+    transform: rotate(72deg) translate(20em) rotate(-72deg);
+}
+
+.form-circle> :nth-of-type(3) {
+    transform: rotate(144deg) translate(20em) rotate(-144deg);
+}
+
+.form-circle> :nth-of-type(4) {
+    transform: rotate(216deg) translate(20em) rotate(-216deg);
+}
+
+.form-circle> :nth-of-type(5) {
+    transform: rotate(288deg) translate(20em) rotate(-288deg);
+}
+
+.form-circle__element img,
+a {
+    display: block;
+    width: 100%;
+    animation: out-rotation ease 30s;
+}
+
+.form-circle__element a {
+    width: 100%;
+    border-radius: 5em;
+    background-color: rosybrown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: out-rotation ease 30s;
+}
+
+@keyframes out-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@media (max-width: 1000px) {
+    .main__form,
+    .form-circle {
+        width: 30em;
+        height: 30em;
+    }
+    .form-circle>* {
+        width: 8em;
+        height: 8em;
+        margin: -4em;
+    }
+    .form-circle> :nth-of-type(1) {
+        transform: rotate(0deg) translate(15em) rotate(0deg);
+    }
+    .form-circle> :nth-of-type(2) {
+        transform: rotate(72deg) translate(15em) rotate(-72deg);
+    }
+    .form-circle> :nth-of-type(3) {
+        transform: rotate(144deg) translate(15em) rotate(-144deg);
+    }
+    .form-circle> :nth-of-type(4) {
+        transform: rotate(216deg) translate(15em) rotate(-216deg);
+    }
+    .form-circle> :nth-of-type(5) {
+        transform: rotate(288deg) translate(15em) rotate(-288deg);
+    }
+}
+
+@media (max-width: 770px) {
+    .main__form,
+    .form-circle {
+        width: 20em;
+        height: 20em;
+    }
+    .form-circle>* {
+        width: 6em;
+        height: 6em;
+        margin: -3em;
+    }
+    .form-circle> :nth-of-type(1) {
+        transform: rotate(0deg) translate(10em) rotate(0deg);
+    }
+    .form-circle> :nth-of-type(2) {
+        transform: rotate(72deg) translate(10em) rotate(-72deg);
+    }
+    .form-circle> :nth-of-type(3) {
+        transform: rotate(144deg) translate(10em) rotate(-144deg);
+    }
+    .form-circle> :nth-of-type(4) {
+        transform: rotate(216deg) translate(10em) rotate(-216deg);
+    }
+    .form-circle> :nth-of-type(5) {
+        transform: rotate(288deg) translate(10em) rotate(-288deg);
+    }
+}
+
+@media (max-width: 460px) {
+    .main__form,
+    .form-circle {
+        width: 16em;
+        height: 16em;
+    }
+    .form-circle>* {
+        width: 4em;
+        height: 4em;
+        margin: -2em;
+    }
+    .form-circle> :nth-of-type(1) {
+        transform: rotate(0deg) translate(8em) rotate(0deg);
+    }
+    .form-circle> :nth-of-type(2) {
+        transform: rotate(72deg) translate(8em) rotate(-72deg);
+    }
+    .form-circle> :nth-of-type(3) {
+        transform: rotate(144deg) translate(8em) rotate(-144deg);
+    }
+    .form-circle> :nth-of-type(4) {
+        transform: rotate(216deg) translate(8em) rotate(-216deg);
+    }
+    .form-circle> :nth-of-type(5) {
+        transform: rotate(288deg) translate(8em) rotate(-288deg);
+    }
 }

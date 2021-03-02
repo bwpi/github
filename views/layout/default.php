@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container p-0 m-0">
         <?=$content;?>
     </div>
 
