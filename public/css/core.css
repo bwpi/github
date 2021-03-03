@@ -31,6 +31,20 @@ body {
     animation: rotation ease 30s;
 }
 
+.submit {
+    position: absolute;
+    width: 10em;
+    height: 10em;
+    padding: 0;
+    margin: 0;
+    border: 1px solid blue;
+    border-radius: 50%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
 @keyframes rotation {
     0% {
         transform: rotate(0deg);
@@ -72,8 +86,7 @@ body {
     transform: rotate(288deg) translate(20em) rotate(-288deg);
 }
 
-.form-circle__element img,
-a {
+.form-circle__element img {
     display: block;
     width: 100%;
     animation: out-rotation ease 30s;
@@ -81,7 +94,8 @@ a {
 
 .form-circle__element a {
     width: 100%;
-    border-radius: 5em;
+    height: 100%;
+    border-radius: 50%;
     background-color: rosybrown;
     display: flex;
     align-items: center;
