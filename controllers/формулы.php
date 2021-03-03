@@ -14,6 +14,7 @@ if(get()){
     debug($file[$_GET['class']][$_GET['quad']]);
 }
 $style = "<link href='/css/core.css' rel='stylesheet'>";
+$script_file = '/js/form.js';
 $data = compact('sessionid');
 $content = getView('_' . $route['controller'], $data);
 include VIEWS . "layout/default.php";
