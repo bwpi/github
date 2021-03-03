@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
 body {
     padding: 0;
 }
@@ -12,11 +13,58 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: bisque;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+.inform {
+    background-color: #555;
+    color: blanchedalmond;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    background-color: #fff;
+}
+
+.submit {
+    position: absolute;
+    font-family: 'Comfortaa', cursive;
+    border: 5px solid white;
+    background-color: #1fc25d;
+    width: 160px;
+    height: 160px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    font-size: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.info div {
+    padding: 2px;
+    color: brown;
+    margin: 0;
 }
 
 .form-circle {
@@ -24,11 +72,24 @@ body {
     width: 40em;
     height: 40em;
     padding: 0;
-    border: 1px solid blue;
+    border: 5px solid rgb(200, 200, 240);
     border-radius: 50%;
     list-style: none;
     box-sizing: content-box;
-    animation: rotation ease 30s;
+    animation: rotation ease 30s infinite;
+}
+
+.form-circle_quad {
+    position: absolute;
+    width: 20em;
+    height: 20em;
+    margin: 0;
+    padding: 0;
+    border: 5px solid rgb(200, 200, 240);
+    border-radius: 50%;
+    list-style: none;
+    box-sizing: content-box;
+    animation: rotation ease 30s infinite;
 }
 
 @keyframes rotation {
@@ -47,6 +108,20 @@ body {
     width: 10em;
     height: 10em;
     margin: -5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-circle_quad>* {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8em;
+    height: 8em;
+    margin: -4em;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,21 +147,61 @@ body {
     transform: rotate(288deg) translate(20em) rotate(-288deg);
 }
 
-.form-circle__element img,
-a {
-    display: block;
-    width: 100%;
-    animation: out-rotation ease 30s;
+.form-circle_quad> :nth-of-type(1) {
+    transform: rotate(0deg) translate(10em) rotate(0deg);
 }
 
-.form-circle__element a {
+.form-circle_quad> :nth-of-type(2) {
+    transform: rotate(90deg) translate(10em) rotate(-90deg);
+}
+
+.form-circle_quad> :nth-of-type(3) {
+    transform: rotate(180deg) translate(10em) rotate(-180deg);
+}
+
+.form-circle_quad> :nth-of-type(4) {
+    transform: rotate(270deg) translate(10em) rotate(-270deg);
+}
+
+.form-circle__element img {
+    display: block;
     width: 100%;
-    border-radius: 5em;
-    background-color: rosybrown;
+    animation: out-rotation ease 30s infinite;
+}
+
+.btn-change {
+    font-family: 'Comfortaa', cursive;
+    border: 5px solid white;
+    background-color: #1fc25d;
+    width: 160px;
+    height: 160px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    font-size: 3rem;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: out-rotation ease 30s;
+    transition: background-color .1s;
+    animation: out-rotation ease 30s infinite;
+}
+
+.btn-change:hover {
+    background-color: #1e924a;
+    color: bisque;
+}
+
+.activate {
+    background-color: #70f55e;
+    color: rgb(125, 91, 250);
 }
 
 @keyframes out-rotation {
@@ -104,10 +219,11 @@ a {
         width: 30em;
         height: 30em;
     }
-    .form-circle>* {
-        width: 8em;
-        height: 8em;
-        margin: -4em;
+    .form-circle>*,
+    .btn-change {
+        width: 128px;
+        height: 128px;
+        margin: -64px;
     }
     .form-circle> :nth-of-type(1) {
         transform: rotate(0deg) translate(15em) rotate(0deg);
@@ -132,10 +248,11 @@ a {
         width: 20em;
         height: 20em;
     }
-    .form-circle>* {
-        width: 6em;
-        height: 6em;
-        margin: -3em;
+    .form-circle>*,
+    .btn-change {
+        width: 96px;
+        height: 96px;
+        margin: -48px;
     }
     .form-circle> :nth-of-type(1) {
         transform: rotate(0deg) translate(10em) rotate(0deg);
@@ -160,10 +277,11 @@ a {
         width: 16em;
         height: 16em;
     }
-    .form-circle>* {
-        width: 4em;
-        height: 4em;
-        margin: -2em;
+    .form-circle>*,
+    .btn-change {
+        width: 64px;
+        height: 64px;
+        margin: -32px;
     }
     .form-circle> :nth-of-type(1) {
         transform: rotate(0deg) translate(8em) rotate(0deg);
