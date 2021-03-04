@@ -26,6 +26,7 @@ $route = dispatcher('shedules/гусельников', 'расписание/08'
 $route = dispatcher('shedules/алексеев', 'расписание/09', $route);
 $route = dispatcher('shedules/кайдаулов', 'расписание/10', $route);
 $route = dispatcher('shedules/учитель', 'расписание/main', $route);
+$route = dispatcher('формулы', 'formulas', $route);
 // $route = dispatcher('shedules', 'расписание/10/<param>/<parametr>', $route);
 $route = dispatcher('07', 'contests', $route);
 /*

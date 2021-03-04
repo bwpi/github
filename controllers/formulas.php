@@ -14,7 +14,7 @@ include (APP . 'appController.php');
 $file = readData(FILES . 'формулы.json', $mode = true);
 if (!get('gen')) {
     $data = compact('sessionid');
-    $content = getView('_' . $route['controller'], $data);
+    $content = getView('/formulas/' . '_' . $route['controller'], $data);
 } else {    
     $selection = $file[get('class')][get('quart')];
     $selected = [];
@@ -34,7 +34,7 @@ if (!get('gen')) {
         }        
     }
     // debug($data);
-    $content = getView($route['controller'], $data);
+    $content = getView('/formulas/' . $route['controller'], $data);
 }
 
 include VIEWS . "layout/default.php";
