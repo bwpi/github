@@ -1,6 +1,6 @@
 <?php
 
-function getView($route, $data = [], $types = '.html') {
+function getView($route, $data = [], $types = '.html', $layout = 'default.php') {
     extract($data);
     ob_start();
     if(is_file(VIEWS . $route . $types)){        
