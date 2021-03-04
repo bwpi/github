@@ -40,12 +40,12 @@ body {
     position: absolute;
     font-family: 'Comfortaa', cursive;
     border: 5px solid white;
-    background-color: #1fc25d;
+    background-color: #1fc25d;    
     width: 160px;
     height: 160px;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
+    color: #f3f6f7;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
@@ -53,8 +53,7 @@ body {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-    font-size: 1rem;
-    border-radius: 50%;
+    font-size: 5rem;    
     display: flex;
     align-items: center;
     justify-content: center;
