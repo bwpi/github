@@ -10,3 +10,18 @@ function getView($route, $data = [], $types = '.html') {
     }
     return $content = ob_get_clean();    
 }
+
+function getVariant($data, $template, $delimetr = '/') {
+    $out = explode($delimetr, $data);
+    if ($template) {
+        foreach ($out as $value) {
+            $temp .= $template($value);
+        }
+        return $temp;
+    }
+    return $out;
+}
+
+function getTemplate($data, $classes = 'alert alert-info') {
+    return "<div class='{$classes}'>{$data}</div>";
+}

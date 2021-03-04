@@ -1,57 +1,21 @@
-<div class="h3">Автоматическая система проверки формул по физике</div>
-<form action="">
-    <select class="form-select" name="class" aria-label="Default select example">
-        <option value="7">Seven</option>
-        <option value="8">Eight</option>
-        <option value="9">Nine</option>
-        <option selected value="10">Ten</option>
-        <option selected value="11">Elleven</option>
-    </select>
-    <select class="form-select" name="quad" aria-label="Default select example">
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-        <option selected value="4">Four</option>
-    </select>
-    <button class="btn btn-primary" type="submit" value="?gen=<?=$sessionid?>">Сгенерировать формулы</button>
-</form>
-
-<div class="row row-cols-1 row-cols-md-3 g-4">
+<div class="row row-cols-1 row-cols-md-3 g-4 position-absolute top-0 start-50 translate-middle-x">
+    <?php foreach($data as $key => $value):?>    
     <div class="col">
         <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="<?=$key?>" class="card-img-top" alt="<?=$key?>">
             <div class="card-body">
-                <h5 class="card-title">Название карточки</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title"><?=$key?></h5>
+                <p class="card-text"><?=$value[0]?></p>
             </div>
             <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+                <small class="text-muted">
+                    <?php 
+                        echo getVariant($value[2], 'getTemplate');
+                    ?>
+                </small>
             </div>
         </div>
     </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Название карточки</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Название карточки</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
-        </div>
-    </div>
+    <?php endforeach;?>
 </div>
-<div class="alert alert-dark fixed-bottom m-0 p-1 text-center">v 0.0.1</div>
+<div class="alert alert-dark fixed-bottom m-0 p-1 text-center">v 0.0.2</div>
