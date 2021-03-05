@@ -11,7 +11,7 @@ $shedule_view = $controller . "/" . $view;
 *Ядро нашей программы
 */
 $files = dirScan();
-$out = sortJsonFiles(sortDataType($files, 'likes','editable','cop', 'формулы'));
+$out = sortJsonFiles(sortDataType($files, 'likes','editable','cop'));
 $id = getId($param);
 $schedule = readData(FILES . $id . '.json');
 $day_week = dayToWeekArray($schedule);

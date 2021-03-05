@@ -40,20 +40,12 @@ body {
     position: absolute;
     font-family: 'Comfortaa', cursive;
     border: 5px solid white;
-<<<<<<< HEAD
-    background-color: #1fc25d;
-=======
     background-color: #1fc25d;    
->>>>>>> f1dd8f12aa640607825743860fd6425785695a11
     width: 160px;
     height: 160px;
     font-weight: 400;
     line-height: 1.5;
-<<<<<<< HEAD
-    color: #212529;
-=======
     color: #f3f6f7;
->>>>>>> f1dd8f12aa640607825743860fd6425785695a11
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
@@ -61,12 +53,7 @@ body {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-<<<<<<< HEAD
-    font-size: 1rem;
-    border-radius: 50%;
-=======
     font-size: 5rem;    
->>>>>>> f1dd8f12aa640607825743860fd6425785695a11
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,7 +72,6 @@ body {
     height: 40em;
     padding: 0;
     border: 5px solid rgb(200, 200, 240);
-<<<<<<< HEAD
     border-radius: 50%;
     list-style: none;
     box-sizing: content-box;
@@ -99,28 +85,10 @@ body {
     margin: 0;
     padding: 0;
     border: 5px solid rgb(200, 200, 240);
-=======
->>>>>>> f1dd8f12aa640607825743860fd6425785695a11
     border-radius: 50%;
     list-style: none;
     box-sizing: content-box;
     animation: rotation ease 30s infinite;
-<<<<<<< HEAD
-=======
-}
-
-.form-circle_quad {
-    position: absolute;
-    width: 20em;
-    height: 20em;
-    margin: 0;
-    padding: 0;
-    border: 5px solid rgb(200, 200, 240);
-    border-radius: 50%;
-    list-style: none;
-    box-sizing: content-box;
-    animation: rotation ease 30s infinite;
->>>>>>> f1dd8f12aa640607825743860fd6425785695a11
 }
 
 @keyframes rotation {
@@ -206,8 +174,6 @@ body {
     background-color: #1fc25d;
     width: 160px;
     height: 160px;
-<<<<<<< HEAD
-=======
     font-weight: 200;
     line-height: 1.5;
     color: #212529;
@@ -238,7 +204,6 @@ body {
     background-color: #1fc25d;
     width: 100%;
     height: 100%;
->>>>>>> f1dd8f12aa640607825743860fd6425785695a11
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
@@ -258,14 +223,6 @@ body {
     animation: out-rotation ease 30s infinite;
 }
 
-<<<<<<< HEAD
-.btn-change:hover {
-    background-color: #1e924a;
-    color: bisque;
-}
-
-=======
->>>>>>> f1dd8f12aa640607825743860fd6425785695a11
 .activate {
     background-color: #70f55e;
     color: rgb(125, 91, 250);
@@ -287,12 +244,8 @@ body {
         height: 30em;
     }
     .form-circle>*,
-<<<<<<< HEAD
-    .btn-change {
-=======
     .btn-change,
     .submit {
->>>>>>> f1dd8f12aa640607825743860fd6425785695a11
         width: 128px;
         height: 128px;
         margin: -64px;
@@ -321,12 +274,8 @@ body {
         height: 20em;
     }
     .form-circle>*,
-<<<<<<< HEAD
-    .btn-change {
-=======
     .btn-change,
     .submit {
->>>>>>> f1dd8f12aa640607825743860fd6425785695a11
         width: 96px;
         height: 96px;
         margin: -48px;
@@ -355,12 +304,8 @@ body {
         height: 16em;
     }
     .form-circle>*,
-<<<<<<< HEAD
-    .btn-change {
-=======
     .btn-change,
     .submit {
->>>>>>> f1dd8f12aa640607825743860fd6425785695a11
         width: 64px;
         height: 64px;
         margin: -32px;
