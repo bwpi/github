@@ -22,6 +22,7 @@ $route = Router(request());
 * Правила маршрутизации
 */
 $route = dispatcher('shedules', 'расписание', $route);
+$route = dispatcher('формулы', 'formulas', $route);
 $route = dispatcher('shedules/гусельников', 'расписание/08', $route);
 $route = dispatcher('shedules/алексеев', 'расписание/09', $route);
 $route = dispatcher('shedules/кайдаулов', 'расписание/10', $route);
