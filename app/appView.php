@@ -11,17 +11,32 @@ function getView($route, $data = [], $types = '.html', $layout = 'default.php') 
     return $content = ob_get_clean();    
 }
 
-function getVariant($data, $template, $delimetr = '/') {
+// function outVariant($data, $template, $classes = 'btn btn-primary mx-1', $delimetr = '/') {
+//     $out = explode($delimetr, $data);
+//     if ($template) {
+//         foreach ($out as $value) {
+//             $temp .= $template($value, $classes);
+//         }
+//         return $temp;
+//     }
+//     return $out;
+// }
+
+// function outResponseOptions($data, $classes) {
+//     return "<a class='{$classes}'>{$data}</a>";
+// }
+
+function outVariant($data, $template, $classes = 'btn btn-primary mx-1', $delimetr = '/') {    
     $out = explode($delimetr, $data);
-    if ($template) {
-        foreach ($out as $value) {
-            $temp .= $template($value);
-        }
-        return $temp;
+    if ($template) {        
+        return $template($out, $classes);
     }
     return $out;
 }
 
-function getTemplate($data, $classes = 'alert alert-info') {
-    return "<div class='{$classes}'>{$data}</div>";
+function outResponseOptions($in, $classes) {    
+    foreach ($in as $value) {
+        $template .= "<a class='{$classes}'>{$value}</a>";
+    }
+    return $template;
 }

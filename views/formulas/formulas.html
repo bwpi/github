@@ -1,17 +1,19 @@
 <div class="row row-cols-1 row-cols-md-3 g-4 position-absolute top-0 start-50 translate-middle-x">
-    <?php foreach($data as $key => $value):?>    
+    <?php foreach($data as $key => $value):?>
     <div class="col">
         <div class="card h-100">
             <img src="<?=$key?>" class="card-img-top" alt="<?=$key?>">
             <div class="card-body">
-                <h5 class="card-title"><?=$key?></h5>
-                <p class="card-text"><?=$value[0]?></p>
+                <h5 class="card-title">
+                    <?=$key?>
+                </h5>
+                <p class="card-text">
+                    <?=$value[0]?>
+                </p>
             </div>
             <div class="card-footer">
                 <small class="text-muted">
-                    <?php 
-                        echo getVariant($value[2], 'getTemplate');
-                    ?>
+                    <?= outVariant($value[2], 'outResponseOptions')?>
                 </small>
             </div>
         </div>

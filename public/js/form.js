@@ -8,7 +8,7 @@ $(function() {
     $('.btn-change').click(function(e) {
         e.preventDefault()
         $(this).toggleClass('activate')
-        let attr = $(this).attr('data-class')
+        let attr = $(this).attr('data-class');
         !out[attr] ? out[attr] = attr : delete out[attr]
         let html = ''
         $('.class').remove()
@@ -17,8 +17,8 @@ $(function() {
                 <div id="${key}" class="class d-inline">${value}</div>
                 `
         })
-        $('.info').prepend(html)        
-        classes = out.filter(Boolean).join(';')        
+        $('.info').prepend(html)
+        classes = out.filter(Boolean).join(';')
     })
 
     $('.btn-change-quad').click(function(e) {
@@ -33,19 +33,19 @@ $(function() {
                 <div class="quarter bg-success d-inline">${value}</div>
                 `
         })
-        $('.info').append(html)       
-        quartes = quart.filter(Boolean).join(';')        
+        $('.info').append(html)
+        quartes = quart.filter(Boolean).join(';')
     })
 
-    $('.submit').click(function(e){        
-        if(!(classes||quartes)){
+    $('.submit').click(function(e) {
+        if (!(classes || quartes)) {
             e.preventDefault()
             alert('Выбери хотя бы класс! Иначе вопросов будет очень много!')
-        } else {            
+        } else {
             cls = classes ? `&class=${classes}` : ''
             qart = quartes ? `&quart=${quartes}` : ''
             $(this).attr('href', gen + cls + qart);
-        }        
+        }
     })
 
 })
