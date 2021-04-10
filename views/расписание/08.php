@@ -52,7 +52,9 @@
                     echo '</div> <br><br><div class="btn-group-vertical">';
                   }
                 ?>     
-                  <a class='btn btn1 <?php if ($value == $id) { echo 'btn2';} ?>' <?php if ((isset($id) & $id != $value)) { echo 'href="?id=' . $value . '"';} {
+                  <a class='btn btn1 <?php if ($value == $id) { echo 'btn2';} ?>' <?php if ((isset($id) & $id != $value)) { echo 'href="?id=' . $value; if (isset($_GET['color'])) { echo '&color=' . $_GET['color'];} echo '"'; {
+                    # code...
+                  }} {
                     # code...
                   }?> style="<?php
                   if ($id == $value) {

@@ -35,7 +35,7 @@
                           <th scope="row"><?=$i;?></th>                                
                           <?php foreach ($schedule as $key_day => $sched):?>
                               <?php $out_work = $schedule[$key_day][$i][0];?>
-                              <td<?= (strstr($out_work, 'в/д')) ? " class='bg-success'" : ''?>><?=$out_work?></td>
+                              <td<?= (strstr($out_work, 'в/д')) ? " class='bg-success text-white'" : ''?>><?=$out_work?></td>
                           <?php endforeach;?>                                
                       </tr>
                   <?php endfor;?>
