@@ -90,6 +90,7 @@ function dayArray($schedule){
 	}
 	return $days;
 }
+
 function dayToWeekArray($data){
 	$output = [];	
 	foreach ($data as $key => $value) {

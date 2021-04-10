@@ -11,30 +11,22 @@
     <div class="diver20"></div>
      <div class="alert alert-warning alert-dismissible fade show mirger20" role="alert"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-  <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/></svg>Информация<br> Кто пройдет, тот молодец:<br>
-  <a target="blank" class="ahref" href="https://forms.gle/ve5QctPj9F84xnVe6"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
-             <path fill-rule="evenodd" d="M6 12.796L11.481 8 6 3.204v9.592zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"></path>
-            </svg> Опрос о любимом цвете</a><br> Другие страницы с расписанием занятий:<br>
+  <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/></svg>Информация<br>Другие страницы с расписанием:<br>
         <?php
-          if ($author != "Гуcельников") { echo
+          if ($author != "Гусельников") { echo
             '<a href="/shedules/08" class="ahref"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
              <path fill-rule="evenodd" d="M6 12.796L11.481 8 6 3.204v9.592zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
-            </svg>Юрий Гусельникоv</a><br>';
+            </svg>Юрий Гусельников</a><br>';
           }
           if ($author != "Кайдаулов") { echo
             '<a href="/shedules/10" class="ahref"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M6 12.796L11.481 8 6 3.204v9.592zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
-            </svg>Роман Кайдаулоv</a><br>';
+            </svg>Роман Кайдаулов</a><br>';
           }
           if ($author != "Алексеев") { echo
             '<a href="/shedules/09" class="ahref"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M6 12.796L11.481 8 6 3.204v9.592zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
-            </svg>Артем Алексееv</a><br>';
-          }
-          if ($author != "Учитель") { echo
-            '<a href="/shedules" class="ahref"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M6 12.796L11.481 8 6 3.204v9.592zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
-            </svg>Учитель</a><br>';
+            </svg>Артем Алексеев</a><br>';
           }
           echo '<div>' . $info . '</div>';?>
           <div align="right">
@@ -60,7 +52,9 @@
                     echo '</div> <br><br><div class="btn-group-vertical">';
                   }
                 ?>     
-                  <a class='btn btn1 <?php if ($value == $id) { echo 'btn2';} ?>' <?php if ((isset($id) & $id != $value)) { echo 'href="?id=' . $value . '"';}?> style="<?php
+                  <a class='btn btn1 <?php if ($value == $id) { echo 'btn2';} ?>' <?php if ((isset($id) & $id != $value)) { echo 'href="?id=' . $value . '"';} {
+                    # code...
+                  }?> style="<?php
                   if ($id == $value) {
                     echo "color: #fff; cursor: default; background-color: #" . $color;
                   }
@@ -97,7 +91,7 @@
                           $style='background-color: #ffffff';
                         }
                       ?>
-                        <tr class="<?=$class?>">
+                        <tr class="<?=$class?>" style="<?=$style?>">
                             <th scope="row"><?=$i;?></th>                                
                             <?php foreach ($schedule as $key_day => $sched):?>
                                 <?php $out_work = $schedule[$key_day][$i][0];?>
@@ -106,7 +100,7 @@
                         </tr>
                     <?php endfor;?>
                 </tbody>
-              </table>
+              </table>            
             </div>
           </div>
           <!-- <div class="col-2 border"><h3>Настройки</h3>

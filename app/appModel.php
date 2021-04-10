@@ -76,7 +76,7 @@ function getId($param) {
     } elseif (isset($param)) {
         $id = $param;	
     } else {	
-        $id = '5';	
+        $id = '5';
     }
     return $id;
 }
@@ -90,10 +90,30 @@ function dayArray($schedule){
 	}
 	return $days;
 }
+
 function dayToWeekArray($data){
 	$output = [];	
 	foreach ($data as $key => $value) {
 		array_push($output, $key);
 	}	
 	return $output;
+}
+
+function getMonth() {
+    $d = getdate(); // использовано текущее время
+    // foreach ($d as $key => $val){
+    //     echo $key . '=' . $val . '<br>';
+    // }
+    if ($d['mon'] === 9||$d['mon'] === 10) {
+        $month = 1;
+    } elseif ($d['mon'] === 11||$d['mon'] === 12) {
+        $month = 2;
+    } elseif ($d['mon'] === 1||$d['mon'] === 3) {
+        $month = 3;
+    } elseif ($d['mon'] === 4||$d['mon'] === 5) {
+        $month = 4;
+    } else {
+        $month = 1;
+    }	
+    return $month;
 }

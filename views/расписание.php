@@ -12,7 +12,9 @@
     <?php include VIEWS . $shedule_head . ".php";?>
   </head>
   <body>
+
     <?php include VIEWS . $shedule_view . ".php";?>
+    
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

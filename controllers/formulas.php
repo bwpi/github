@@ -10,13 +10,16 @@ include (APP . 'appModel.php');
 include (APP . 'appView.php');
 include (APP . 'appController.php');
 
-
 $file = readData(FILES . 'формулы.json', $mode = true);
 if (!get('gen')) {
     $data = compact('sessionid');
     $content = getView('/formulas/' . '_' . $route['controller'], $data);
-} else {    
-    $selection = $file[get('class')][get('quart')];
+} else {
+    if (!get('quart')) {        
+        $selection = $file[get('class')][getMonth()];
+    } else {
+        $selection = $file[get('class')][get('quart')];
+    }    
     $selected = [];
     $data = [];
     foreach($selection as $key => $value){
@@ -32,9 +35,7 @@ if (!get('gen')) {
         foreach($value as $key => $out) {
             $data[$key] = $out;
         }        
-    }
-    // debug($data);
+    }    
     $content = getView('/formulas/' . $route['controller'], $data);
 }
-
 include VIEWS . "layout/default.php";

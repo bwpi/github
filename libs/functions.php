@@ -2,6 +2,15 @@
 /*
 * 
 */
+function debug2($arr) {
+    echo '<div style="position: relative; border-radius: 10px; top: 0; left: 0; float:right; margin:30px; padding: 20px; background-color: rgba(100,100,250,.9); z-index: 1500">';
+    echo '<h4>DEBUG</h4>';
+    echo '<div style="padding: 10px; background-color: rgba(250,250,250,.9)">';
+    echo '<pre>' . print_r($arr, true) . '</pre>';
+    echo '</div>';
+    echo '</div>';
+}
+
 function debug($arr) {
     echo '<pre>' . print_r($arr, true) . '</pre>';
 }

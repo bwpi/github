@@ -9,7 +9,7 @@ $(function() {
         e.preventDefault()
         $(this).toggleClass('activate')
         let attr = $(this).attr('data-class');
-        !out[attr] ? out[attr] = attr : delete out[attr]
+        (!out[attr]) ? (out[attr] = attr) : delete out[attr]
         let html = ''
         $('.class').remove()
         out.forEach((value, key) => {
