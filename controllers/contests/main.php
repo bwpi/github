@@ -3,7 +3,7 @@
 * Загрузка модели
 */
 include (MODELS . 'model.php');
-$dir = ROOT . 'public/img/';
+$dir = '/public/img/';
 $arr = [];
 $unarr = [];
 
