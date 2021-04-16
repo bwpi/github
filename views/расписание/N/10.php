@@ -97,7 +97,7 @@
                             <th scope="row"><?=$i;?></th>                                
                             <?php foreach ($schedule as $key_day => $sched):?>
                                 <?php $out_work = $schedule[$key_day][$i][0];?>
-                                <td<?= (strstr($out_work, 'в/д')) ? " class='selected'" : ''?>><?=$out_work?></td>
+                                <td><?=$out_work?></td>
                             <?php endforeach;?>                                
                         </tr>
                     <?php endfor;?>

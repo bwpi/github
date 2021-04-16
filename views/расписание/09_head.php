@@ -48,4 +48,8 @@
       .btn2 {
         box-shadow: 0px 0px #<?php echo $color;?>;
       }
+      .selected {
+        color: #fff;
+        background-color: #<?php echo $color;?> !important;
+      }
     </style>

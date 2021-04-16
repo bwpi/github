@@ -6,7 +6,7 @@
       else {
       echo
       '"https://img.icons8.com/dusk/100/000000/bug.png"';
-    }?>>
+    }?>>   
     <style type="text/css">
       ::selection {
         color: white;
