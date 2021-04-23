@@ -5,4 +5,4 @@
 $title = 'Расписание';
 $nameout = 'Кайдаулов';
 $author = 'Кайдаулов';
-$color = 'bf0acc';
+$color = (isset($_GET['color'])) ? $_GET['color'] : 'bf0acc';
