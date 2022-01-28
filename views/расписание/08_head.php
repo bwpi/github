@@ -1,12 +1,5 @@
 <link rel="stylesheet" type="text/css" href="<?=SERVER?>/css/style.css">
-    <link rel="icon" type="image/png" href=<?php 
-      if ($author == 'Гусельников') {
-      echo '"https://img.icons8.com/doodle/480/000000/puzzle--v1.png"';
-      }
-      else {
-      echo
-      '"https://img.icons8.com/dusk/100/000000/bug.png"';
-    }?>>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/doodle/480/000000/puzzle--v1.png">
     <style type="text/css">
       ::selection {
         color: white;
@@ -38,9 +31,19 @@
         background-color: #<?php echo $color;?>;
         color: #fff;
       }
+.table:hover .tr1 {
+        color: #000;
+        background-color: #EDEEF0;
+      }
+      .tr1, .tr1:hover {
+        background-color: #<?php echo $color;?>;
+        color: #fff;
+        transition: 0.3s;
+      }
       tr:hover {
         background-color: #<?php echo $color;?> !important;
         color: #fff !important;
+        transition: 0s !important;
       }
       #classnum {
         color: #<?php echo $color;?>;
@@ -52,5 +55,10 @@
         color: #fff;
         background-color: #<?php echo $color;?> !important;
         border-radius: 15px 15px 15px 15px;
+        transition: 0.3s;
+      }
+      tr:hover .selected {
+        border-radius: 0px 0px 0px 0px !important;
+        transition: 0s !important;
       }
     </style>

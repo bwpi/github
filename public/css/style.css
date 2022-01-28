@@ -18,7 +18,7 @@ header:hover {
   width: 100px;
 }
 .diver20 {
-  height: 20px
+  height: 20px;
 }
 .mirger20 {
   mirgin-top: 20px !important;
@@ -83,4 +83,21 @@ header:hover {
       }
       header:hover .alert {
         opacity: 100%;
+      }
+      .bestColor {
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 5px 5px 5px 5px !important;
+        margin-bottom: 10px;
+        transition: 0.3s;
+      }
+      .bestColor:hover {
+        transition: 0.3s;
+        height: 40px !important;
+        width: 40px !important;
+      }
+      .btnsColor {
+        width: 50px !important;
+        flex-wrap: nowrap !important;
+        height: 50px;
       }

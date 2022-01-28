@@ -1,0 +1,42 @@
+{
+	"admin":{
+		"title": "Администратор системы",
+		"main": "Страница быстрого доступа МКОУ ГСОШ",
+		"rules":"admin",
+		"password":"c80c27077b4a9e4c892be7917ff82953",
+        "set": "",
+        "auth": ""
+	},
+	"teachers":{
+		"title": "Учитель",
+		"main": "Страница быстрого доступа МКОУ ГСОШ",
+		"rules":"teach",
+		"password":"c80c27077b4a9e4c892be7917ff82953",
+        "set": "",
+        "auth": ""
+	},
+	"administration":{
+		"title": "Администрация",
+		"main": "Страница быстрого доступа МКОУ ГСОШ",
+		"rules":"administration",
+		"password":"c80c27077b4a9e4c892be7917ff82953",
+        "set": "",
+        "auth": ""
+	},
+	"study":{
+		"title": "Студент",
+		"main": "Страница быстрого доступа МКОУ ГСОШ",
+		"rules":"study",
+		"password":"c80c27077b4a9e4c892be7917ff82953",
+        "set": "",
+        "auth": ""
+	},
+	"stud":{
+		"title": "Студ",
+		"main": "Страница быстрого доступа МКОУ ГСОШ",
+		"rules":"study",
+		"password":"c80c27077b4a9e4c892be7917ff82953",
+        "set": "",
+        "auth": ""
+	}
+}

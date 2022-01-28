@@ -1,12 +1,13 @@
 <link rel="stylesheet" type="text/css" href="<?=SERVER?>/css/style.css">
     <link rel="icon" type="image/png" href=<?php 
-      if ($author == 'Гусельников') {
+      if ($author == 'Алексеев') {
       echo '"https://img.icons8.com/doodle/480/000000/puzzle--v1.png"';
       }
       else {
       echo
       '"https://img.icons8.com/dusk/100/000000/bug.png"';
     }?>>
+
     <style type="text/css">
       ::selection {
         color: white;
@@ -53,3 +54,4 @@
         background-color: #<?php echo $color;?> !important;
       }
     </style>
+    

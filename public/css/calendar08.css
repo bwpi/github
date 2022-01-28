@@ -1,0 +1,106 @@
+.container-fluid h1{
+    font-family: Arial;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+div {
+	box-shadow: -1px 1px 2px 2px rgba(70, 50, 220, .6);
+		padding: 5px;
+	margin: 7px;
+	border-radius: 5px;
+	font-weight: 500;
+}
+.header {
+	border: 5mm ridge rgba(170, 50, 220, .6);
+}
+.day {
+	background-color: #ddd;
+	border-width: 1px; 
+}
+.calendar > div {
+	position: relative;
+}
+.calendar .tabakov > div {
+	position: relative!important;
+	height: 12vw;
+	width: 13%;
+	margin: 5px 0;
+}
+.calendar .tabakov > div form {
+	position: absolute;
+	top: 25px;
+	z-index: 1;
+	left: 0;
+}
+.tabakov {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.tabakov .bd{
+	display: none;
+}
+.tabakov .add{
+	width:25px;
+	overflow: hidden;
+
+}
+.current_day {
+	box-shadow: -1px 1px 2px 2px #000099;
+	border: 0px solid #000099;
+	padding: 5px;
+	margin: 7px 5px;
+}
+.holly_day {
+	border: 1px solid #990000;
+	padding: 5px;
+	margin: 5px;
+}
+.time {
+	background-color: #d2d2d2;
+}
+.time0 {
+	background-color: #aaa;
+}
+.time1 {
+	background-color: #000;
+}
+.develop {
+	background-color: #30D5C8;
+}
+.hb {
+	background-color: #2aeb2a3d;
+}
+.bd {
+	background-color: #e9e955;
+	color: #000;
+}
+.weekend {
+	background-color: #469add;
+	color: #fff;
+	box-shadow: 0 0 2px 1px #469add;
+}
+a.add {
+	padding: 2px 5px;
+	width: max-content;
+	position: absolute;
+	right: 3px;
+	top:3px;
+	background-color: #006bff;
+	border-radius: 5px;
+	text-decoration: none;
+	color: #fff;
+	box-shadow: 0 0 2px 1px #124854;
+}
+a.add:hover {
+	color: #006bff;
+	background-color: #fff;
+	transition: all.4s ease;
+
+}
+form {
+    display: inline;		    
+}
+form > div {		    
+    margin: 7px 0px;
+}

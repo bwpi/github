@@ -17,4 +17,5 @@ if(is_file(VIEWS . $controller . '.html')){
 	echo "<p>не найден вид <b>" . VIEWS . $controller . ".html</b></p>";
 }
 $content = ob_get_clean();
+
 include VIEWS . "layout/default.html";

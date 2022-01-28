@@ -1,0 +1,337 @@
+[{
+    "title": "5-класс",
+    "href": "5_ktp_inf",
+    "target": "",
+    "classes": "btn btn-info",
+    "category": "ktp_inf",
+    "rule": "teach"
+}, {
+    "title": "5К-класс",
+    "href": "5K_ktp_inf",
+    "target": "",
+    "classes": "btn btn-info",
+    "category": "ktp_inf",
+    "rule": "teach"
+}, {
+    "title": "6-класс",
+    "href": "6_ktp_inf",
+    "target": "",
+    "classes": "btn btn-success",
+    "category": "ktp_inf",
+    "rule": "teach"
+}, {
+    "title": "6К-класс",
+    "href": "6K_ktp_inf",
+    "target": "",
+    "classes": "btn btn-success",
+    "category": "ktp_inf",
+    "rule": "teach"
+}, {
+    "title": "7-класс",
+    "href": "7_ktp_inf",
+    "target": "",
+    "classes": "btn btn-primary",
+    "category": "ktp_inf",
+    "rule": "teach"
+}, {
+    "title": "8-класс",
+    "href": "8_ktp_inf",
+    "target": "",
+    "classes": "btn btn-secondary",
+    "category": "ktp_inf",
+    "rule": "teach"
+}, {
+    "title": "9-класс",
+    "href": "9_ktp_inf",
+    "target": "",
+    "classes": "btn btn-success",
+    "category": "ktp_inf",
+    "rule": "teach"
+}, {
+    "title": "10-класс",
+    "href": "10_ktp_inf",
+    "target": "",
+    "classes": "btn btn-warning",
+    "category": "ktp_inf",
+    "rule": "teach"
+}, {
+    "title": "11-класс",
+    "href": "11_ktp_inf",
+    "target": "",
+    "classes": "btn btn-info",
+    "category": "ktp_inf",
+    "rule": "teach"
+}, {
+    "title": "7-класс",
+    "href": "7_ktp_fiz",
+    "target": "",
+    "classes": "btn btn-primary",
+    "category": "ktp_fiz",
+    "rule": "teach"
+}, {
+    "title": "8-класс",
+    "href": "8_ktp_fiz",
+    "target": "",
+    "classes": "btn btn-secondary",
+    "category": "ktp_fiz",
+    "rule": "teach"
+}, {
+    "title": "9-класс",
+    "href": "9_ktp_fiz",
+    "target": "",
+    "classes": "btn btn-success",
+    "category": "ktp_fiz",
+    "rule": "teach"
+}, {
+    "title": "10-класс",
+    "href": "10_ktp_fiz",
+    "target": "",
+    "classes": "btn btn-warning",
+    "category": "ktp_fiz",
+    "rule": "teach"
+}, {
+    "title": "11-класс",
+    "href": "11_ktp_fiz",
+    "target": "",
+    "classes": "btn btn-info",
+    "category": "ktp_fiz",
+    "rule": "teach"
+}, {
+    "title": "Календарь экзаменов",
+    "href": "",
+    "target": "_blank",
+    "classes": "btn btn-primary",
+    "category": "gia",
+    "rule": "teach"
+}, {
+    "title": "Статусы",
+    "href": "",
+    "target": "_blank",
+    "classes": "btn btn-secondary",
+    "category": "gia",
+    "rule": "teach"
+}, {
+    "title": "Сдающие",
+    "href": "",
+    "target": "_blank",
+    "classes": "btn btn-success",
+    "category": "gia",
+    "rule": "teach"
+}, {
+    "title": "Организаторы",
+    "href": "",
+    "target": "_blank",
+    "classes": "btn btn-info",
+    "category": "gia",
+    "rule": "teach"
+}, {
+    "title": "Календарь экзаменов",
+    "href": "",
+    "target": "_blank",
+    "classes": "btn btn-primary",
+    "category": "ege",
+    "rule": "teach"
+}, {
+    "title": "Статусы",
+    "href": "",
+    "target": "_blank",
+    "classes": "btn btn-secondary",
+    "category": "ege",
+    "rule": "teach"
+}, {
+    "title": "Сдающие",
+    "href": "",
+    "target": "_blank",
+    "classes": "btn btn-success",
+    "category": "ege",
+    "rule": "teach"
+}, {
+    "title": "Организаторы",
+    "href": "",
+    "target": "_blank",
+    "classes": "btn btn-info",
+    "category": "ege",
+    "rule": "teach"
+}, {
+    "title": "Календарно-тематический план",
+    "href": "#ktpMenu",
+    "target": "",
+    "classes": "btn btn-info",
+    "category": "",
+    "rule": "teach"
+}, {
+    "title": "Расписание",
+    "href": "main/schedule",
+    "target": "",
+    "classes": "btn btn-primary rassp historyAPI",
+    "category": "main",
+    "rule": "teach"
+}, {
+    "title": "Звонки",
+    "href": "main/time",
+    "target": "",
+    "classes": "btn btn-primary rassp historyAPI",
+    "category": "main",
+    "rule": "teach"
+}, {
+    "title": "Календарь",
+    "href": "cal",
+    "target": "",
+    "classes": "btn btn-secondary cal historyAPI",
+    "category": "main",
+    "rule": "teach"
+}, {
+    "title": "Опросы",
+    "href": "quest",
+    "target": "",
+    "classes": "btn btn-info quest historyAPI",
+    "category": "main",
+    "rule": "teach"
+}, {
+    "title": "<img src='http://gsoshcu/info/files//img/yandex.png' alt='ЯндексПочта' width='70em'>",
+    "href": "https://mail.yandex.ru/?uid=38634928#inbox",
+    "target": "_blank",
+    "classes": "btn btn-light p-1",
+    "category": "main",
+    "rule": "teach"
+}, {
+    "title": "<img src='http://gsoshcu/info/files//img/mail.png' alt='МайлПочта' width='70em'>",
+    "href": "https://e.mail.ru/messages/inbox/",
+    "target": "_blank",
+    "classes": "btn btn-info p-1",
+    "category": "main",
+    "rule": "teach"
+}, {
+    "title": "Поддержка",
+    "href": "thems/support.php",
+    "target": "_blank",
+    "classes": "btn btn-dark",
+    "category": "admin",
+    "rule": "admin"
+}, {
+    "title": "Общая",
+    "href": "thems/user.php",
+    "target": "_blank",
+    "classes": "btn btn-dark",
+    "category": "admin",
+    "rule": "admin"
+}, {
+    "title": "Разработка",
+    "href": "http://gsoshcu/info/school.info/",
+    "target": "_blank",
+    "classes": "btn btn-dark",
+    "category": "admin",
+    "rule": "admin"
+}, {
+    "title": "Разработка",
+    "href": "http://gsoshcu:88",
+    "target": "_blank",
+    "classes": "btn btn-dark",
+    "category": "admin",
+    "rule": "admin"
+}, {
+    "title": "<img src = 'https://static.dnevnik.ru/img/logotypes/logotype.png' alt = 'Дневник.ру' height = '20em'>",
+    "href": "http://dnevnik.ru",
+    "target": "_blank",
+    "classes": "btn btn-light",
+    "category": "education",
+    "rule": ""
+}, {
+    "title": "<img class='images' src='/img/logo.png' alt='Learningapps.org' height='20em'>",
+    "href": "http://learningapps.org",
+    "target": "_blank",
+    "classes": "btn btn-info",
+    "category": "education",
+    "rule": ""
+}, {
+    "title": "<img class='images' src='/img/logo_5.png' alt='plickers.com' height='20em'>",
+    "href": "http://plickers.com",
+    "target": "_blank",
+    "classes": "btn btn-success",
+    "category": "education",
+    "rule": ""
+}, {
+    "title": "<img class='images' src='/img/logo1.png' alt='Сайт школы' height='20em'>Сайт МКОУ ГСОШ",
+    "href": "http://gsosh-gari.ru",
+    "target": "_blank",
+    "classes": "btn btn-warning",
+    "category": "is",
+    "rule": ""
+}, {
+    "title": "<img class='images' src='/img/logo2.png' alt='ЕГЭ 2019' height='20em'>",
+    "href": "http://ege.edu.ru",
+    "target": "_blank",
+    "classes": "btn btn-light",
+    "category": "is",
+    "rule": ""
+}, {
+    "title": "<img class='images' src='/img/logo3.png' alt='ОГЭ 2019' height='20em'>",
+    "href": "http://gia.edu.ru",
+    "target": "_blank",
+    "classes": "btn btn-success",
+    "category": "is",
+    "rule": ""
+}, {
+    "title": "Техподдержка ГИА",
+    "href": "https://support.gia66.ru",
+    "target": "_blank",
+    "classes": "btn btn-danger",
+    "category": "is",
+    "rule": ""
+}, {
+    "title": "ФИС ОКО",
+    "href": "https://lk-fisoko.obrnadzor.gov.ru",
+    "target": "_blank",
+    "classes": "btn btn-danger",
+    "category": "is",
+    "rule": ""
+}, {
+    "title": "Статград ВПР",
+    "href": "https://vpr.statgrad.org",
+    "target": "_blank",
+    "classes": "btn btn-success",
+    "category": "is",
+    "rule": ""
+}, {
+    "title": "Статград",
+    "href": "https://statgrad.org",
+    "target": "_blank",
+    "classes": "btn btn-info",
+    "category": "is",
+    "rule": ""
+}, {
+    "title": "КАИС ИРРО",
+    "href": "http://kais.irro.ru",
+    "target": "_blank",
+    "classes": "btn btn-light",
+    "category": "is",
+    "rule": ""
+}, {
+    "title": "Образовательные тесты",
+    "href": "http://testedu.ru",
+    "target": "_blank",
+    "classes": "btn btn-success",
+    "category": "sdo",
+    "rule": ""
+}, {
+    "title": "Школьные тесты",
+    "href": "https://testschool.ru",
+    "target": "_blank",
+    "classes": "btn btn-success",
+    "category": "sdo",
+    "rule": ""
+}, {
+    "title": "Сайт К.Полякова",
+    "href": "http://kpolyakov.spb.ru",
+    "target": "_blank",
+    "classes": "btn btn-light",
+    "category": "sdo",
+    "rule": ""
+}, {
+    "title": "Сайт И.В. Журавлева",
+    "href": "http://bwpi.ru",
+    "target": "_blank",
+    "classes": "btn btn-light",
+    "category": "sdo",
+    "rule": ""
+}]

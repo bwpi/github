@@ -13,22 +13,43 @@
   <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
   <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/></svg>Информация<br>Другие страницы с расписанием:<br>
         <?php
-          if ($author != "Гусельников") { echo
-            '<a href="/shedules/08" class="ahref"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
-             <path fill-rule="evenodd" d="M6 12.796L11.481 8 6 3.204v9.592zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
-            </svg>Юрий Гусельников</a><br>';
-          }
-          if ($author != "Кайдаулов") { echo
-            '<a href="/shedules/10" class="ahref"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M6 12.796L11.481 8 6 3.204v9.592zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
-            </svg>Роман Кайдаулов</a><br>';
-          }
-          if ($author != "Алексеев") { echo
-            '<a href="/shedules/09" class="ahref"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M6 12.796L11.481 8 6 3.204v9.592zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
-            </svg>Артем Алексеев</a><br>';
-          }
-          echo '<div>' . $info . '</div>';?>
+          noAuthor($author);
+          ?>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eyedropper" viewBox="0 0 16 16">
+          <path d="M13.354.646a1.207 1.207 0 0 0-1.708 0L8.5 3.793l-.646-.647a.5.5 0 1 0-.708.708L8.293 5l-7.147 7.146A.5.5 0 0 0 1 12.5v1.793l-.854.854a.5.5 0 1 0 .708.707L1.707 15H3.5a.5.5 0 0 0 .354-.146L11 7.707l1.146 1.147a.5.5 0 0 0 .708-.708l-.647-.646 3.147-3.146a1.207 1.207 0 0 0 0-1.708l-2-2zM2 12.707l7-7L10.293 7l-7 7H2v-1.293z"/>
+          </svg>Выбери любой цвет:
+          <div class="row btnsColor">
+            <a href="<?php 
+                        colorBox('C71585');
+                       ?>" class="aBestColor"><div class="bestColor" style="background-color: #C71585"></div></a>
+            <a href="<?php 
+                        colorBox('00bfff');
+                       ?>" class="aBestColor"><div class="bestColor" style="background-color: #00bfff"></div></a>
+            <a href="<?php 
+                        colorBox('ff4500');
+                       ?>" class="aBestColor"><div class="bestColor" style="background-color: #ff4500"></div></a>
+          </div><div class="row btnsColor">
+            <a href="<?php 
+                        colorBox('FFBA00');
+                       ?>" class="aBestColor"><div class="bestColor" style="background-color: #FFBA00"></div></a>
+            <a href="<?php 
+                        colorBox('0000FF');
+                       ?>" class="aBestColor"><div class="bestColor" style="background-color: #0000FF"></div></a>
+            <a href="<?php 
+                        colorBox('76A900');
+                       ?>" class="aBestColor"><div class="bestColor" style="background-color: #76A900"></div></a>
+          </div><div class="row btnsColor">
+            <a href="<?php 
+                        colorBox('00FFFF');
+                       ?>" class="aBestColor"><div class="bestColor" style="background-color: #00FFFF"></div></a>
+            <a href="<?php 
+                        colorBox('FF0000');
+                       ?>" class="aBestColor"><div class="bestColor" style="background-color: #FF0000"></div></a>
+            <a href="<?php 
+                        colorBox('00FA9A');
+                       ?>" class="aBestColor"><div class="bestColor" style="background-color: #00FA9A"></div></a>
+          </div>
+          <div><?=$info?></div>
           <div align="right">
             <div class="sharethis-inline-share-buttons"></div>
             Поделись расписанием с друзьями!
@@ -142,6 +163,9 @@
                 <?php if (isset($Email)) { echo '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square-dots-fill" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.5a1 1 0 0 0-.8.4l-1.9 2.533a1 1 0 0 1-1.6 0L5.3 12.4a1 1 0 0 0-.8-.4H2a2 2 0 0 1-2-2V2zm5 4a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
 </svg> Почта: ' . $Email . '<br>';}?>
+<?php if (isset($Vk)) { echo '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-quote-fill" viewBox="0 0 16 16">
+  <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+</svg> Вконтакте: @' . $Vk . '<br>';}?>
     </div>
     </footer>
   </div>

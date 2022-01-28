@@ -1,0 +1,18 @@
+  procedure F(n: integer); forward;
+  procedure G(n: integer); forward;
+  procedure F(n: integer);
+  begin
+  if n > 0 then
+    G(n - 1);
+  end;
+  procedure G(n: integer);
+  begin
+  writeln('*');
+  if n > 1 then begin
+     writeln('*');
+     F(n - 2);
+  end;
+  end;
+
+Сколько символов "звёздочка" будет напечатано на экране при выполнении
+вызова F(13)?

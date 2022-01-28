@@ -1,0 +1,51 @@
+div {
+	border: 10px solid blue;
+	padding: 5px;
+}
+.calendar > div {
+	position: relative;
+}
+.current_day {
+	border: 5px solid yellow;
+	padding: 5px;
+	margin: 5px;
+}
+.holly_day {
+	border: 5px solid red;
+	padding: 5px;
+	margin: 5px;
+}
+.time {
+	background-color: #d2d2d2;
+}
+.time0 {
+	background-color: #aaa;
+}
+.time1 {
+	background-color: #000;
+}
+.develop {
+	background-color: blue;
+}
+.hb {
+	background-color: green;
+}
+.bd {
+	background-color: yellow;
+}
+.weekend {
+	background-color: gray;
+}
+a.add {
+	padding: 2px 5px;
+	border: 1px solid #124854;
+	width: max-content;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+form {
+    display: inline;
+}

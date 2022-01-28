@@ -5,4 +5,7 @@
 $title = 'Расписание';
 $nameout = 'Кайдаулов';
 $author = 'Кайдаулов';
-$color = (isset($_GET['color'])) ? $_GET['color'] : 'bf0acc';
+$color = getColor('00bfff');
+$Email = 'Geniosar1@mail.ru';
+$Vk = 'r.kaydaulov';
+// FFBA00

@@ -5,7 +5,7 @@
       }
       else {
       echo
-      '"https://img.icons8.com/dusk/100/000000/bug.png"';
+      '"<img src="https://img.icons8.com/ios/64/000000/autumn.png"';
     }?>>   
     <style type="text/css">
       ::selection {

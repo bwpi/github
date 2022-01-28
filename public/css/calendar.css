@@ -1,0 +1,23 @@
+
+.card h4 {
+  cursor: pointer;
+}
+div.card-container {
+  border: none;
+  padding: 0;
+   display: none; 
+  transition: all .4s ease;
+  overflow: hidden;
+  height: 0;
+}
+div.card-container.active {          
+  height: auto;
+  padding: 5px;
+  display:block;
+}
+
+.holly_day {
+border: 5px solid red;
+padding: 5px;
+margin: 5px;
+}      

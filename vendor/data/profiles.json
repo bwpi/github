@@ -1,0 +1,20 @@
+{
+    "admin": {
+        "title": "Администратор",
+        "main": "Административная страница МКОУ ГСОШ",
+        "set": "$(\".user\").remove();$.removeCookie(\"admin\");$(\".dash\").hide();$(\"form.search\").show(1000);$(\".login\").show(1000);",
+        "auth": "<a class='btn btn-white login' data-toggle='modal' data-target='#auth'><i class='fas fa-user'><\/i><\/a>"
+    },
+    "teach": {
+        "title": "Учитель",
+        "main": "Страница быстрого доступа МКОУ ГСОШ",
+        "set": "$(\".sup, .user, .dashboard\").remove();",
+        "auth": ""
+    },
+    "study": {
+        "title": "Ученик",
+        "main": "Информационная страница МКОУ ГСОШ",
+        "set": "$(\".adms, .sup\").remove();",
+        "auth": ""
+    }
+}

@@ -1,0 +1,67 @@
+div a {
+    display: block;
+}
+
+.buttons {
+    margin-top: 25px;
+    border: 1px solid #2196f3;
+    padding: 10px;
+    min-height: 250px;
+}
+
+.buttons.web {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.buttons.web a {
+    width: 30%;
+    display: inline-block;
+}
+
+.buttons a img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.buttons a {
+    color: #148576;
+    background-color: rgba(242, 247, 220);
+    border: 1px solid #169e00;
+    border-radius: 0 10px 0 10px;
+    transition: 0.2s;
+    /*display: inline-block;*/
+    margin: 5px;
+    padding: 5px;
+    width: 25%;
+    font-size: 20px;
+    height: 48px !important;
+    overflow: hidden;
+    word-break: break-word;
+    text-decoration: none;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.buttons a i {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+}
+
+.buttons a:hover {
+    color: white !important;
+    background-color: #3c7d42;
+    border-radius: 10px 0 10px 0;
+    height: max-content;
+    border: 1px solid #bbbf8a;
+}
+
+.exit a {
+    height: max-content;
+    width: 150px;
+}

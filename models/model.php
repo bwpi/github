@@ -4,6 +4,10 @@ function readData($file_name = '', $mode = true){
 	return json_decode(file_get_contents($file_name), $mode);
 }
 
+function readJsonData($file_name = '', $mode = true){
+	return json_decode(file_get_contents(FILES . $file_name . '.json'), $mode);
+}
+
 function readCsvData($file_name = ''){
 	$row = 0;	
     $out = [];
@@ -97,4 +101,34 @@ function dayToWeekArray($data){
 		array_push($output, $key);
 	}	
 	return $output;
+}
+
+function scanRec($dir = '') {
+    $direct = [];
+    $path = $dir;
+    if (is_dir($path)) {
+        $dir_scan = array_slice(scandir($path . '/'), 2);            
+        foreach ($dir_scan as $key => $value) {
+            $file = $path . '/' . $value;
+            if (is_file($file)) {
+                // $direct = $value;
+                $data = [
+                    'name' => $value,
+                    // 'type' => mime_content_type($file),
+                    // 'size' => round(stat($file)[7]/1024, 2),
+                    // 'atime' => date("d F Y H:i:s", stat($file)[8]),
+                    // 'mtime' => date("d F Y H:i:s", stat($file)[9])
+                ];
+                // implode('/', $data);
+                array_push($direct, implode('/', $data));
+                
+            } else {                    
+                $direct[$value] = scanRec($dir . '/' . $value);
+            }                
+        }            
+    } else {
+        echo 'no dir' . $path;
+    }
+    ksort($direct, SORT_STRING);
+    return $direct;
 }

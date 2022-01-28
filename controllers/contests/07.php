@@ -12,7 +12,7 @@ $files = dirScan($dir);
 $data = json_decode(file_get_contents(FILES . "likes.json"), true);
 
 if (count($files)!=count($data)){
-    foreach ($files as $key => $value) {	
+    foreach ($files as $key => $value) {
         $arr[$value] = 0;
     }
     file_put_contents(FILES . "likes.json", json_encode($arr, JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));

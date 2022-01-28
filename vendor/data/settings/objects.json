@@ -1,0 +1,16 @@
+{
+	"admin":{
+		"информатика":"bg-primary",
+		"физика":"bg-secondary",
+		"программирование":"bg-success",
+		"моделирование":"bg-danger",
+		"веб-дизайн":"bg-warning",
+		"инженерка":"bg-info",
+		"проекты":"bg-warning",		
+	    "физика (у)":"bg-light",
+	    "физика (рз)":"bg-secondary",	    
+	    "коррекция":"bg-info",
+	    "fiz":"bg-light text-dark",
+	    "inf":"bg-dark text-white"
+	}
+}

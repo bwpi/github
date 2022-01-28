@@ -19,34 +19,7 @@
     		<div class="col-8 border">
     			<div class="h3 text-center" id="title">Расписание занятий в <b id="id"><?=$id?></b> классе</div>
                 <div class="table-responsive">                  
-                  <table class="table table-sm table-hover table-bordered table-white shadow-lg" id="schedule">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <?php foreach ($day_week as $key => $day):?>                
-                            <th scope="col"><?=$day?></th>                          
-                        <?php endforeach;?>
-                        </tr>
-                    </thead>    
-                    <tbody>
-                        <?php for ($i=1; $i <= 8; $i++):?>
-                            <?php if ($i%2 == 0) {
-                                $class = 'bg-warning';
-                            } elseif ($i%3 == 0) {
-                                $class = 'bg-light';
-                            } else {
-                                $class = 'bg-danger text-white';
-                            };?>
-                            <tr class="<?=$class?>">
-                                <th scope="row"><?=$i;?></th>                                
-                                <?php foreach ($schedule as $key_day => $sched):?>
-                                    <?php $out_work = $schedule[$key_day][$i][0];?>
-                                    <td<?= (strstr($out_work, 'в/д')) ? " class='bg-success'" : ''?> contenteditable="true"><?=$out_work?></td>
-                                <?php endforeach;?>                                
-                            </tr>      
-                        <?php endfor;?>
-                    </tbody>
-                  </table>
+                  <?php RenderTable(compact('day_week', 'schedule'), 'true');?>
                 </div>
                 <button class="btn btn-info d-print-none" onclick="print()">Распечатать расписание</button>
                 <form method="GET">
