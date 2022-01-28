@@ -5,7 +5,7 @@ include CORE . 'show/ShowDataInTemplates.php';
  */
 class Temp {
     private static $path_templates = '/temp/';
-    private static $type = '.html';
+    private static $type = '.php';
 
 	static public function templates($templates = '', $array = [], $set = TRUE) {
         ob_start();

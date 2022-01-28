@@ -6,7 +6,7 @@
             $type = $item['exec'];
         }
     ?>
-<a class="<?= $item['style']?>" href="<?= $item['href']?>"><img src="/img/<?=$type?>.svg"/><?= $item['name']?></a>
+<a class="<?= $item['style']?>" href="<?= $item['href']?>"><img src="/img/<?=$type?>.svg" /><?= $item['name']?></a>
 <?php endforeach;?>
 <?php if(empty($array)):?>
 <div class="alert alert-warning">Нет данных для отображения</div>
