@@ -1,14 +1,28 @@
-div {
-	border: 10px solid blue;
+div.navi {
+	border: 2px solid #02bbff;
 	padding: 5px;
 }
+
 .calendar > div {
+	padding: 5px;
 	position: relative;
 }
-.current_day {
-	border: 5px solid yellow;
+.days > div {
+	border: 1px solid #02bbff;
 	padding: 5px;
-	margin: 5px;
+	position: relative;
+	margin: 6px 0;
+	border-radius: 6px;
+	box-shadow: 0px 2px 8px 3px #000;
+	transition: all .4s ease;
+}
+.days > div:hover {
+	box-shadow: 0px 0px 8px 3px #014264;
+}
+.current_day {
+	padding: 8px!important;
+	background-color: #d67800;
+	color: #fff;
 }
 .holly_day {
 	border: 5px solid red;
@@ -26,15 +40,36 @@ div {
 }
 .develop {
 	background-color: blue;
+	box-shadow: 0px 0px 2px 2px #014264;
+	padding: 5px;
+	border-radius: 8px;
+	margin-top:  8px;
 }
 .hb {
-	background-color: green;
+	background-color:#27ff57;
+	color: #fff;
+	box-shadow: 2px 2px 8px 3px #014264;
+
 }
 .bd {
-	background-color: yellow;
+	background-color: #455327;
+	box-shadow: 0px 0px 3px 3px #014264;
+	padding: 5px;
+	border-radius: 8px;
+	margin-top:  8px;
 }
+.hd {
+	background-color: #455327;
+	box-shadow: 0px 0px 2px 2px #014264;
+	padding: 5px;
+	border-radius: 8px;
+	margin-top:  8px;
+}
+
 .weekend {
 	background-color: gray;
+	color: #fff;
+	box-shadow: 0px 0px 8px 3px #014264;
 }
 a.add {
 	padding: 2px 5px;
@@ -45,6 +80,13 @@ a.add {
 	top: 5px;
 	background-color: #fff;
 	border-radius: 5px;
+	font-size: 12px;
+	text-decoration: none;
+	box-shadow: 0px 0px 3px 2px #014264;
+	transition: all .4s ease;
+}
+a.add:hover {
+	box-shadow: 0px 0px 2px 1px #014264;
 }
 form {
     display: inline;

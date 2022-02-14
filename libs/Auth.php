@@ -18,6 +18,14 @@ class Auth {
         self::$users = readJsonData($file);        
     }
 
+    public static function exit() {
+        if (isset($_GET['exit'])) {            
+            session_destroy();
+            header('Location:' . '/');            
+            exit;
+        }
+    }
+
     public static function auth() {
         if ($_SESSION['auth']) {            
             return self::getUser();            
@@ -42,7 +50,7 @@ class Auth {
     public static function login() {              
         if (array_key_exists($_POST['login'], self::$users)&&(sha1($_POST['password'])==self::$users[$_POST['login']]['password'])) {  
             $_SESSION['auth'] = $_POST['login'];
-            header('Location:' . $_SERVER['HTTP_REFERER']);
+            // header('Location:' . $_SERVER['HTTP_REFERER']);
             return true;
         } return false;
     }

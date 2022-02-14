@@ -21,9 +21,31 @@ $(document).ready(function(){
     $("#vid").click(function(e){
         e.preventDefault()
         console.log('dfsd')
-        $("div").removeClass('tabakov');
-       
+        $("div").removeClass('tabakov');       
     });
+
+    $("#prev").click(function(e){
+		e.preventDefault();
+		$.ajax({
+			url:"",
+			method:"POST",
+			data:{prev:1},
+			success:function(data){				
+				console.log(data);
+			}
+		})    			
+	}); 
+	$("#next").click(function(e){
+		e.preventDefault();
+		$.ajax({
+			url:"",
+			method:"POST",
+			data:{next:1},
+			success:function(data){				
+				console.log(data);
+			}
+		})    			
+	});
 
 
 });    	

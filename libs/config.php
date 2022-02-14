@@ -3,7 +3,7 @@
 * Константа, которая содержит путь до корневого (главного) каталога нашего сайта
 */
 //Отображение данных в темплейтах
-define('ALLOW_ARRAY_DATA', 1);
+define('ALLOW_ARRAY_DATA', 0);
 define('ALLOW_ERROR', 0);
 /*
 *Включение ошибок
@@ -28,4 +28,4 @@ define('LIBS', ROOT . '/libs/');
 define('CTRLS', ROOT . '/controllers/');
 define('MODELS', ROOT . '/models/');
 define('VIEWS', ROOT . '/views/');
-define('SERVER', $_SERVER['HTTP_ADDRESS']);
+define('SERVER', $_SERVER['HTTP_HOST']);

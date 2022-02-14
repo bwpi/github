@@ -6,21 +6,20 @@ div a {
     margin-top: 25px;
     border: 1px solid #2196f3;
     padding: 10px;
-    min-height: 250px;
 }
 
 .buttons.web {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .buttons.web a {
-    width: 30%;
+    width: 24%;
+    height: 25%;
     display: inline-block;
 }
 
-.buttons a img {
+.buttons a object {
     width: 32px;
     height: 32px;
     margin-right: 10px;
@@ -32,12 +31,11 @@ div a {
     border: 1px solid #169e00;
     border-radius: 0 10px 0 10px;
     transition: 0.2s;
-    /*display: inline-block;*/
     margin: 5px;
     padding: 5px;
     width: 25%;
     font-size: 20px;
-    height: 48px !important;
+    height: 48px;
     overflow: hidden;
     word-break: break-word;
     text-decoration: none;
@@ -45,6 +43,7 @@ div a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: all .4s ease;
 }
 
 .buttons a i {
@@ -59,6 +58,21 @@ div a {
     border-radius: 10px 0 10px 0;
     height: max-content;
     border: 1px solid #bbbf8a;
+}
+
+div.info {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba(100, 100, 100, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.buttons a:hover div.info {
+    display: block;
 }
 
 .exit a {

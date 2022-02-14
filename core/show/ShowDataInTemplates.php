@@ -1,7 +1,9 @@
 <?php
 
 class ShowDataInTemplates {    
-    static public function out($array = [], $prop = []){ ?> 
+    static public function out($array = [], $prop = []) {
+        if(ALLOW_ARRAY_DATA && $array)
+        ?> 
         <style>
             .open_array {            
                 position:absolute!important;

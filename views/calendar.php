@@ -21,7 +21,7 @@
   </head>
   <body>    
     <div class="container-fluid">
-      <div>
+      <div class="navi">
         <a class="btn btn-info" href="http://192.168.1.9:88/calendar/">Главная</a>        
         <a class="btn btn-info" href="http://192.168.1.9:88/calendar/08">08</a>
         <a class="btn btn-info" href="http://192.168.1.9:88/calendar/09">09</a>
@@ -29,7 +29,7 @@
         <a class="btn btn-info" href="http://192.168.1.9:88/calendar/11">11</a>        
       </div>
     <?php 
-      if ($storage_views) {
+      if (isset($storage_views)&&!empty($storage_views)) {
         include VIEWS . $storage_views . ".php";    
       } else {
         echo $content;
@@ -40,12 +40,12 @@
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <?php if ($script_file):?>
       <script src="<?=$script_file;?>"></script>
     <?php endif;?>
     <?php if ($scripts) {
         echo $scripts;
-      } ?>    
+      } ?> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>       
   </body>
 </html>

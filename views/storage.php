@@ -16,17 +16,9 @@
     <title>Файловый сервер</title>    
   </head>
   <body>    
-    <div class="container-fluid">
-      <div>
-        <a class="btn btn-info" href="http://192.168.1.9:88/storage/">Главная</a>
-        <a class="btn btn-info" href="http://192.168.1.9:88/storage/07">07</a>
-        <a class="btn btn-info" href="http://192.168.1.9:88/storage/08">08</a>
-        <a class="btn btn-info" href="http://192.168.1.9:88/storage/09">09</a>
-        <a class="btn btn-info" href="http://192.168.1.9:88/storage/10">10</a>
-        <a class="btn btn-info" id="view" href="">view</a>        
-      </div>
+    <div class="container-fluid">    
     <?php 
-      if ($storage_views) {
+      if (isset($storage_views)&&!empty($storage_views)) {
         include VIEWS . $storage_views . ".php";    
       } else {
         echo $content;        
@@ -38,20 +30,32 @@
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <?php if ($script_file):?>
+    <?php if (isset($script_file)&&!empty($script_file)):?>
       <script src="<?=$script_file;?>"></script>
     <?php endif;?>
-    <?php if ($scripts) {
+    <?php if (isset($scripts)&&!empty($scripts)) {
         echo $scripts;
       } ?> 
       <script>
         $(document).ready(function(){
+          if (localStorage.getItem('web') == 1) {
+            $('.buttons').addClass('web');
+            $('#view').find('i').toggleClass('d-none');
+          }
           $('body').on('click','.open_array',function () {
             $(this).next('div').toggleClass('d-none');
           });
            $('body').on('click','#view',function (e) {
             e.preventDefault();
+            $(this).find('i').toggleClass('d-none');
             $('.buttons').toggleClass('web');
+            localStorage.setItem('web', 1);
+            if($('.buttons').hasClass('web')) {              
+              localStorage.setItem('web', 1);
+            } else {
+              localStorage.removeItem('web');
+            }
+            console.log(localStorage.getItem('web'));
           });
         });
       </script>   

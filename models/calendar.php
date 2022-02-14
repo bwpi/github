@@ -96,6 +96,22 @@ function birthDay($day, $file_name) {
 	}
 	return $out;
 }
+function happyDay($day, $file_name) {
+	$out = [];
+	$data = json_decode(file_get_contents(ROOT . '/files/' . $file_name . '.json'),true);
+	if (array_key_exists($day, $data)) {
+		$out['class'] = ' hd';				
+	}
+	if (is_array($data[$day])) {
+		foreach ($data[$day] as $value) {
+			$out['block'] .= '<div class="hd">' . $value . '</div>';
+		}
+	}
+	if (isset($data[$day])&&!is_array($data[$day])) {
+		$out['block'] = '<div class="hd">' . $data[$day] . '</div>';
+	}
+	return $out;
+}
 function developDay($day, $file_name) {
 	$out = [];
 	$data = json_decode(file_get_contents(ROOT . '/files/' . $file_name . '.json'),true);

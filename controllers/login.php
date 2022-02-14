@@ -41,10 +41,9 @@ $report = Auth::login();
         <main class="form-signin">
             <form method="POST">                
                 <h1 class="h3 mb-3 fw-normal">Пожалуйста войдите в систему</h1>
-                <?php 
-                debug($_SERVER);
+                <?php                 
                     if ($report) {
-                        echo '<a href="/" class="alert alert-success">На главную</a>';
+                        echo '<div class="alert alert-danger"><a href="/" class="alert alert-success">На главную</a></div>';
                     } else {
                         echo '<div class="alert alert-danger">Что-то пошло не так!</div>';
                     }                

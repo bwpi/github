@@ -19,7 +19,6 @@ if(is_file(CTRLS . $controller . '/' . $view . '.php')) {
 } else {
     include CTRLS . $controller . '/main.php';
 }
-
 /*
 *Подключение шаблона
 */

@@ -15,10 +15,10 @@ $shedule_view = $controller . "/" . $view;
 /*
 *Ядро нашей программы
 */
-$files = dirScan();
-$out = sortJsonFiles(sortDataType($files, 'likes','editable','cop', 'формулы', 'develop', 'hb'));
+$files = dirScan(FILES . 'shedules/');
+$out = sortJsonFiles(sortDataType($files));
 $id = getId($param);
-$schedule = readData(FILES . $id . '.json');
+$schedule = readData(FILES . 'shedules/' . $id . '.json');
 $day_week = dayToWeekArray($schedule);
 // debug($files);
 // debug($out);

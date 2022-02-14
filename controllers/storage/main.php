@@ -1,47 +1,58 @@
 <?php
 include LIBS . 'Auth.php';
+
+/**
+ * Блок авторизации
+ */
 new Auth('teachers');
+Auth::exit();
 $auth = Auth::auth();
+/**
+ * 1. Инициализируем класс FS с начальным каталогом и файлами для сканирования
+ */
+$Fs = new Fs('/mnt/shared/');
 
-$file_path = '/mnt/teachers/' . urldecode($_GET['dir']);
-if (file_exists($file_path)) {
-    if(is_file($file_path)){        
-        // ob_end_clean();        
-        header('Content-Description: File Transfer');
-        header('Content-Type: ' . mime_content_type($file_path));
-        header('Content-Disposition: attachment; filename=' . basename($file_path));
-        header('Content-Transfer-Encoding: binary');
-        header('Content-Length: ' . filesize($file_path));
-        readfile($file_path);
-        exit();
-    }
-}
+/**
+ * 4. Запуск метода для скачивания файла
+ * Отрабатывает если нажмем на ссылку с файлом
+ */
+// $Fs->recursive('/mnt/teachers/');
+// exit;
+$Fs->downloadFile();
 
-// $users = [];
-// for ($i=0; $i < 50; $i++) {
-//     $prefix = '';
-//     if($i < 10) {
-//         $prefix = '0';
-//     }
-//     $users['user' . $prefix . $i] = [
-//         'id' => $i,
-//         'name' => 'user' . $prefix . $i,
-//         'role' => 'teacher',
-//         'password_real' => 'user' . $prefix . $i . '_' . "00" . $prefix . $i,
-//         'password' => sha1('user' . $prefix . $i . '_' . "00" . $prefix . $i),
-//         'propertys' => []
-//     ];    
-// }
-// writeData(FILES . 'teachers.json', $users);
-$Fs = new Fs("/mnt/shared/");
-
-$content .= "<h3 class='text-center'>Пользователь - " . $auth['name'] . "</h3>";
+/**
+ * Формирование контента на странице
+ */
+$content = '';
+$content .= Temp::templates('navbar', $auth);
 
 if (isset($_GET['dir'])&&!empty($_GET['dir'])) {    
     $dir = $_GET['dir'];
-    $Fs->setCatalog($dir)->dirScan()->showInTo($dir);    
+    /**
+     * 3. Класс FS
+     * ->установка текущего каталога внутри базового
+     * ->сканируем выбранный каталог
+     * ->возвращаем массив найденных элементов
+     */
+    $Fs->setCatalog($dir)
+        ->dirScan()
+        ->showInTo($dir);
+    /**
+     * Хлебные крошки и навигация по каталогам
+     */
+    $content .= Temp::templates('breadcrumb', $Fs->breadcrumb);
+    /**
+     * Полученный выше массив передаем в Вид
+     */    
     $content .= '<div class="buttons">' . Temp::templates('a', $Fs->temp_array) . '</div>';    
 } else {
-    $Fs->scanRec()->show();    
+    /**
+     * 4. Чтение корневого каталога, инициализированного на первом этапе
+     */
+    $Fs->scanRec()->show();
+    /**
+     * Хлебные крошки и навигация по каталогам
+     */
+    $content .= Temp::templates('breadcrumb', $Fs->breadcrumb);
     $content .= '<div class="buttons">' . Temp::templates('a', $Fs->temp_array) . '</div>';
 }
